@@ -35,9 +35,32 @@ button {
 }
 
 #restart {
-    margin-top: 0.9em;
+    margin-top: .7em;
 }
 
 #display-container{
     background-color: aliceblue;
+    padding: 2.7em 1.8em;
+    width: 80%;
+    max-width: 37.5em;
+    margin: 0 auto;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 0.6em;
+}
+
+.header{
+    margin-bottom: 2em;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    border-bottom: 0.1em solid gold;    
+}
+
+.number-of-count{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
