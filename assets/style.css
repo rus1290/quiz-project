@@ -64,3 +64,14 @@ button {
     justify-content: space-between;
     align-items: center;
 }
+
+.timer-div {
+    background-color: aquamarine;
+    width: 6em;
+    border-radius: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7em 1.5em;
+}
+
