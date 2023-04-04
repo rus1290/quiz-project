@@ -75,3 +75,38 @@ button {
     padding: 0.7em 1.5em;
 }
 
+.question {
+    margin-bottom: 1.25em;
+    font-weight: 600;
+}
+
+.options-div {
+    font-size: 0.9em;
+    width: 100%;
+    padding: 1em;
+    margin: 0.3em 0;
+    text-align: left;
+    outline: none;
+    background: transparent;
+    border: 1px solid lightslategray;
+    border-radius: 0.3em;
+}
+
+.options-div:disabled{
+    color: black;
+    cursor: not-allowed;
+}
+
+#next-button {
+    font-size: 1em;
+    margin-top: 1.5em;
+    background-color: orange;
+    color: black;
+    padding: .75em 2em;
+    border-radius: 0.5em;
+    float: right;
+}
+
+.hide{
+    display: none;
+}
