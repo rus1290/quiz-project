@@ -63,6 +63,7 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: .8em;
 }
 
 .timer-div {
@@ -109,4 +110,21 @@ button {
 
 .hide{
     display: none;
+}
+
+.incorrect {
+    background-color: white;
+    color: red;
+    border-color:red;
+}
+
+.incorrect {
+    background-color: salmon;
+    color: blueviolet;
+    border-color:blueviolet;
+}
+
+#user-score {
+    font-size: 1.5em;
+    color: #fff;
 }
