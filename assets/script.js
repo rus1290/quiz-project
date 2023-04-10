@@ -1,0 +1,13 @@
+let timeRemain = document.querySelector(".time-left");
+let quizContain = document.getElementById("container");
+let btnNxt = document.getElementById("next-button");
+let questCount = document.querySelector("number-of-question");
+let displayCont = document.getElementById("display-container");
+let scoreCont = document.getElementById("score-container");
+let userScore = document.getElementById("user-score");
+let startScrn = document.getElementById("start-screen");
+let startBtn = document.getElementById("start-button");
+let NumOfQues;
+let scoreCount = 0;
+let count = 11;
+let countdown;
