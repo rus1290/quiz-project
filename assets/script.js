@@ -176,4 +176,35 @@ const quizDisplay = (questCount) => {
     quizCards.forEach((card) => {
         card.classList.add("hide");
     });
+    quizCards[questCount].classList.remove("hide");
+};
+
+function quizCreator() {
+    quizArray.sort(() => Math.random() - 0.5);
+
+    for (let i of quizArray) {
+        i.options.sort(() => Math.random() - 0.5);
+        let div = document.createElement("div");
+        div.classList.add("container-mid", hide);
+
+        questCount.innerHTML = 1 + " of " + quizArray.length + " Question";
+
+        let question_DIV = document.createElement("p");
+        question_DIV.classList.add("question");
+        question_DIV.innerHTML = i.question;
+        div.appendChild(question_DIV);
+
+        div.innerHTML += `
+        <button class="option-div" onclick="checker(this)">
+        ${i.options[0]}</button>
+        <button class="option-div" onclick="checker(this)">
+        ${i.options[1]}</button>
+        <button class="option-div" onclick="checker(this)">
+        ${i.options[2]}</button>
+        <button class="option-div" onclick="checker(this)">
+        ${i.options[3]}</button>
+
+        `;
+        quizContainer.appendChild(div);
+    }
 }
