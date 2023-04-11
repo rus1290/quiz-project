@@ -158,3 +158,22 @@ btnNxt.addEventListener("click", (dsplNext = () =>{
         timerDisplay();
     }
 }));
+
+const timerDisplay = () => {
+    countdown = setInterval(() => {
+        count--;
+        timeLeft.innerHTML = `${count}s`;
+        if (count == 0) {
+            clearInterval(countdown);
+            displayNext();
+        }
+    }, 1000);
+}
+
+const quizDisplay = (questCount) => {
+    let quizCards = document.querySelectorAll("container-mid");
+
+    quizCards.forEach((card) => {
+        card.classList.add("hide");
+    });
+}
