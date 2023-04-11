@@ -12,6 +12,7 @@ let scoreCount = 0;
 let count = 11;
 let countdown;
 
+// An array with 11 questions with options and answer array for each question.
 const quizQuest = [
     {
         id: "0",
@@ -135,3 +136,25 @@ const quizQuest = [
         correct: "search engine optimization",
     }
 ];
+
+restart.addEventListener("click", () => {
+    initial();
+    displayCont.classList.remove("hide");
+    scoreCont.classList.add("hide");
+});
+
+btnNxt.addEventListener("click", (dsplNext = () =>{
+    questCount += 1;
+
+    if(questCount === quizQuest.length) {
+        displayCont.classList.add("hide");
+        scoreCont.classList.remove("hide");
+    }
+    else{
+        NumOfQues.innerHTML = questCount + 1 + " of " + quizQuest.length + " Question";
+        quizDisplay(questCount);
+        count = 11;
+        clearInterval(countdown);
+        timerDisplay();
+    }
+}));
