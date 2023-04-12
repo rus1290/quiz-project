@@ -213,19 +213,38 @@ function checker(userOption){
     let userSolution = userOption.innerText;
     let question = document.getElementsByClassName("container-mid")[questCount];
     let options = question.querySelectorAll("option-div");
-}
 
-if(userSolution === quizArray[questCount].correct){
-    userOption.classList.add("correct");
-    scoreCount++;
-} else {
-    userOption.classList.add("incorrect");
 
+    if(userSolution === quizArray[questCount].correct){
+        userOption.classList.add("correct");
+        scoreCount++;
+        } else {
+            userOption.classList.add("incorrect");
+
+            options.forEach((element) => {
+                if ((element.innerText = quizArray[questCount].correct)) {
+                    element.classList.add("correct");
+                }
+            });
+    }
+
+    clearInterval(countdown);
     options.forEach((element) => {
-        if ((element.innerText = quizArray[questCount].correct)) {
-            element.classList.add("correct");
-        }
+        element.disabled = true;
     });
+
 }
 
-clearInterval(countdown);
+function initial() {
+    quizContainer.innerHTML = "";
+    questCount = 0;
+    scoreCount = 0;
+    scoreCount = 0;
+    count = 11;
+    clearInterval(countdown);
+    timerDisplay();
+    quizCreater();
+    quizDisplay(questCount);
+}
+
+
