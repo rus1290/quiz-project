@@ -208,3 +208,24 @@ function quizCreator() {
         quizContainer.appendChild(div);
     }
 }
+
+function checker(userOption){
+    let userSolution = userOption.innerText;
+    let question = document.getElementsByClassName("container-mid")[questCount];
+    let options = question.querySelectorAll("option-div");
+}
+
+if(userSolution === quizArray[questCount].correct){
+    userOption.classList.add("correct");
+    scoreCount++;
+} else {
+    userOption.classList.add("incorrect");
+
+    options.forEach((element) => {
+        if ((element.innerText = quizArray[questCount].correct)) {
+            element.classList.add("correct");
+        }
+    });
+}
+
+clearInterval(countdown);
